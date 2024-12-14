@@ -17,4 +17,50 @@ NOTA: Revisa los apartados de ayuda para saber como crear un tipo LocalDate  a p
 [5] Salir: se terminará el programa.
 
 
+## Explicación de este proyecto
+1. Clase KimYenaEventTask
+    · Propósito: Representar las tareas asociadas a un evento.
+    · Atributos
+        - description: Texto descriptivo de la tarea
+        - isCompleted: Estado de completitud de la tarea
+    · Métodos
+        - toggleCompletion(): Cambia el estado de la tarea (completada/no completada).
+        - isCompleted(): Reotrna el estado actual de la tarea.
+        - toString(): Representa la tarea en formato texto.
+    · Conceptos
+        - Encapsulación: Atributos privados con acceso mediante métodos públicos.
+        - Métodos auxiliares: Evitar duplicación de código.
+
+2. Clase KimYenaEvent
+    · Propósito: Gestionar los eventos y sus tareas asociadas.
+    · Atributos:
+        - title: Nombre del evento.
+        - date: Fecha del evento (LocalDate).
+        - priority: Prioridad del evento (enum Priority).
+        - tasks: Lista de tareas asociadas (ArrayList<KimYenaEventTask>).
+   · Métodos
+        - addTask(KimYenaEventTask task): añade una tarea al evento.
+        - getTasks(): Retorna la lista de tareas.
+        - toString(): Representa el evento en formato texto, incluyendo el progreso de tareas.
+    · Conceptos
+        - Enumeración: Uso de enum Priority para manejar prioridades.
+        - Streams: Contar tareas completadas con expresiones lambda.
+        - Encapsulación: Métodos para gestionar tareas.
+
+3. Clase KimYenaMain
+    · Propósito: Controlar el flujo principal del programa, mostrando el menú e interactuando con el usuario.
+    · Atributos
+        - events: Lista global de eventos (ArrayList<KimYenaEvent>).
+        - scanner: Instancia para capturar entradas del usuario.
+    · Métodos
+        - showMenu(): Presenta el menú principal.
+        - addEvent(): Añade un evento tras solicitar datos al usuario.
+        - deleteEvent(): Muestra los eventos existentes.
+        - toggleTaskCompletion(): Permite marcar o desmarcar tareas de un evento.
+    · Conceptos
+        - while(true) para mostrar el menú.
+        - Manejo de excepciones: Validación de entradas y errores comunes.
+        - Uso de enumeraciones: Priority.valueOf() para convertir texto a un valor del enum.
+
+
 

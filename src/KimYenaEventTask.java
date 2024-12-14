@@ -1,3 +1,4 @@
+// EventTask es una tarea asociada a un evento
 public class KimYenaEventTask {
     // Descripción de la tarea
     private String text;
@@ -15,14 +16,14 @@ public class KimYenaEventTask {
         return isCompleted;
     }
 
-    // Marca o desmarca la tarea como completada.
+    // Getter para verificar si la tarea está completada
     public void toggleCompletion() {
         isCompleted = !isCompleted;
     }
 
+    // Sobrescribe el método toString para la tarea en formato legible
     @Override
     public String toString() {
         return String.format("Tarea: %s [Estado: %s]", text, isCompleted ? "Completada" : "Pendiente");
     }
 }
-//fin
