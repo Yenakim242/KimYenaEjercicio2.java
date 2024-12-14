@@ -25,3 +25,4 @@ public class KimYenaEventTask {
         return String.format("Tarea: %s [Estado: %s]", text, isCompleted ? "Completada" : "Pendiente");
     }
 }
+//fin
