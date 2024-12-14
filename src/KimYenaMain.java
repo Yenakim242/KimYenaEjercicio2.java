@@ -53,7 +53,7 @@ public class KimYenaMain {
         KimYenaEvent event = new KimYenaEvent(title, date, priority);
 
         System.out.println("¿Desea agregar tareas al evento? (s/n): ");
-        if (scanner.nextLine().equalsIgnoreCase("s")){
+        if (scanner.nextLine().equalsIgnoreCase("s")) {
             while (true) {
                 System.out.println("Ingrese la descripción de la tarea (o escriba 'salir' para terminar): ");
                 String taskDescription = scanner.nextLine();
@@ -64,6 +64,7 @@ public class KimYenaMain {
         events.add(event);
         System.out.println("Evento agregado exitosamente");
     }
+
     private static void deleteEvent() {
         System.out.println("Ingrese el título del evento a borrar.");
         String title = scanner.nextLine();
@@ -88,12 +89,12 @@ public class KimYenaMain {
         }
     }
 
-    private static void  toggleTaskCompletion() {
+    private static void toggleTaskCompletion() {
         System.out.println("Ingrese el título del evento: ");
         String title = scanner.nextLine();
         KimYenaEvent event = events.stream().filter(e -> e.getTitle().equals(title)).findFirst().orElse(null);
-        
-        if (event == null){
+
+        if (event == null) {
             System.out.println("Evento no encontrado.");
             return;
         }
@@ -104,7 +105,7 @@ public class KimYenaMain {
             System.out.printf("[%d] %s\n", i + 1, tasks.get(i));
         }
         System.out.println("Seleccione el número de la tarea para cambiar su estado: ");
-        int taskIndex = Integer.parseInt(scanner.nextLine()) -1;
+        int taskIndex = Integer.parseInt(scanner.nextLine()) - 1;
 
         if (taskIndex >= 0 && taskIndex < tasks.size()) {
             tasks.get(taskIndex).toggleCompletion();
