@@ -7,7 +7,12 @@ public class KimYenaEventTask{
     // Constructor de la clase EventTask
     public KimYenaEventTask(String text){
         this.text = text;
-        this.isCompleted = false;
+        this.isCompleted = false; // Por defecto, no está completada
+    }
+
+    // Método para obtener el estado de la tarea
+    public boolean isCompleted() {
+        return isCompleted;
     }
 
     // Marca o desmarca la tarea como completada.

@@ -27,8 +27,8 @@ public class KimYenaEvent{
 
     @Override
     public String toString() {
-        long completedTask = tasks.stream().filter(task -> task.isCompleted).count();
-        return String.format("Evento: %s, Fecha: %s, Prioridad: %s, Tareas completadas: %d/%d", title, date, priority, completedTask, tasks.size());
+        long completedTasks = tasks.stream().filter(task -> task.isCompleted()).count();
+        return String.format("Evento: %s, Fecha: %s, Prioridad: %s, Tareas completadas: %d/%d", title, date, priority, completedTasks, tasks.size());
     }
 
     public String getTitle() {
@@ -37,5 +37,9 @@ public class KimYenaEvent{
 
     public ArrayList<KimYenaEventTask> getTasks() {
         return tasks;
+    }
+    // Enumerrado Priority dentor de la clase
+    public enum Priority {
+        HIGH, MEDIUM, LOW
     }
 }
