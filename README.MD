@@ -1,4 +1,4 @@
-##Ejercicio #2 Event Planner
+## Ejercicio #2 Event Planner
 
 LSINNOVA Events es una agencia especializada en la planificación y organización de eventos corporativos, sociales y artísticos. En LSINNOVA, la clave del éxito está en una cuidadosa planificación y en el control detallado de cada uno de los eventos que organizan para sus clientes.
 
